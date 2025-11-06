@@ -14,7 +14,7 @@ class HomeView extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SearchInput(hint: 'search',),
+              AppInput(hint: 'search',),
               SizedBox(height: 13),
               ClipRRect(
                 borderRadius: BorderRadius.circular(20),

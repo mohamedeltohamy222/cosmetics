@@ -1,8 +1,8 @@
 import 'package:cosmetics_app/views/core/components/app_image.dart';
 import 'package:flutter/material.dart';
 
-class SearchInput extends StatefulWidget {
-  SearchInput({
+class AppInput extends StatefulWidget {
+  AppInput({
     super.key,
     this.suffixIcon,
     this.hint,
@@ -17,10 +17,10 @@ class SearchInput extends StatefulWidget {
   final double? bottomSpace;
 
   @override
-  State<SearchInput> createState() => _SearchInputState();
+  State<AppInput> createState() => _AppInputState();
 }
 
-class _SearchInputState extends State<SearchInput> {
+class _AppInputState extends State<AppInput> {
   late int selectedCountryCode;
   final list = [10, 20, 30, 50];
   bool isHidden = true;

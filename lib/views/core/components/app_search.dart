@@ -1,4 +1,3 @@
-import 'package:cosmetics_app/views/core/app_input.dart';
 import 'package:cosmetics_app/views/core/components/search_input.dart';
 import 'package:flutter/material.dart';
 
@@ -7,7 +6,7 @@ class AppSearch extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SearchInput(
+    return AppInput(
       hint: 'search',
       suffixIcon: 'search.svg',
 

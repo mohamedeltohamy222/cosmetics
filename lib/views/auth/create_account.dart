@@ -1,10 +1,9 @@
 import 'package:cosmetics_app/views/auth/verify_code.dart';
-import 'package:cosmetics_app/views/core/app_button.dart';
-import 'package:cosmetics_app/views/core/app_input.dart';
+import 'package:cosmetics_app/views/core/components/app_button.dart';
 import 'package:cosmetics_app/views/core/components/app_image.dart';
 import 'package:cosmetics_app/views/core/components/app_login_or_register.dart';
 import 'package:cosmetics_app/views/core/components/search_input.dart';
-import 'package:cosmetics_app/views/core/logic/helper_method.dart';
+import 'package:cosmetics_app/views/core/components/helper_method.dart';
 import 'package:cosmetics_app/views/home/pages/view.dart';
 import 'package:flutter/material.dart';
 
@@ -36,14 +35,14 @@ class CreateAccountView extends StatelessWidget {
              //   SizedBox(height: 14),
 
                 SizedBox(height: 24),
-                SearchInput(label: "Your Name"),
+                AppInput(label: "Your Name"),
 
-                SearchInput(label: "Phone Number", withCountryCode: true),
-                SearchInput(
+                AppInput(label: "Phone Number", withCountryCode: true),
+                AppInput(
                   label: "Create your password",
                   isPassword: true,
                 ),
-                SearchInput(
+                AppInput(
                   label: "Confirm password",
                   isPassword: true,
                 ),

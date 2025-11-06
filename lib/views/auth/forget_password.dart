@@ -1,11 +1,11 @@
 import 'dart:math';
 
-import 'package:cosmetics_app/views/core/app_button.dart';
+import 'package:cosmetics_app/views/core/components/app_button.dart';
 import 'package:cosmetics_app/views/core/app_input.dart';
 import 'package:cosmetics_app/views/core/components/app_image.dart';
 import 'package:cosmetics_app/views/core/components/app_login_or_register.dart';
 import 'package:cosmetics_app/views/core/components/search_input.dart';
-import 'package:cosmetics_app/views/core/logic/helper_method.dart';
+import 'package:cosmetics_app/views/core/components/helper_method.dart';
 import 'package:cosmetics_app/views/home/pages/view.dart';
 import 'package:flutter/material.dart';
 
@@ -46,7 +46,7 @@ body: SafeArea(
                   ),
                 ),
                 SizedBox(height: 40),
-               SearchInput(label: "Phone Number",withCountryCode: true,bottomSpace: 56,),
+               AppInput(label: "Phone Number",withCountryCode: true,bottomSpace: 56,),
                
                 
                 AppButton(text: 'Login',onPressed: () {
