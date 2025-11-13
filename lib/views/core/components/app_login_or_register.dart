@@ -1,5 +1,5 @@
 import 'package:cosmetics_app/views/auth/create_account.dart';
-import 'package:cosmetics_app/views/core/logic/helper_method.dart';
+import 'package:cosmetics_app/views/core/components/helper_method.dart';
 import 'package:flutter/material.dart';
 
 class AppLoginOrRegister extends StatelessWidget {
@@ -37,7 +37,7 @@ class AppLoginOrRegister extends StatelessWidget {
             ),
           ],
         ),
-
+          
         textAlign: TextAlign.center,
       ),
     );

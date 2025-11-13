@@ -52,7 +52,6 @@ class CreateAccountView extends StatelessWidget {
                   goTo(VerifyCodeView());
                 },),
 
-                // SizedBox(height: 78),
               ],
             ),
           ),

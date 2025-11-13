@@ -1,7 +1,8 @@
 
 import 'package:cosmetics_app/views/auth/login.dart';
-import 'package:cosmetics_app/views/core/app_button.dart';
-import 'package:cosmetics_app/views/core/logic/helper_method.dart';
+import 'package:cosmetics_app/views/core/components/app_button.dart';
+import 'package:cosmetics_app/views/core/components/app_image.dart';
+import 'package:cosmetics_app/views/core/components/helper_method.dart';
 import 'package:flutter/material.dart';
 
 class OnBoardingView extends StatefulWidget {
@@ -13,16 +14,20 @@ class OnBoardingView extends StatefulWidget {
 
 class _OnBoardingViewState extends State<OnBoardingView> {
   @override
-  List<String> texts = ['WELCOME!', 'SEARCH & PICK', 'PUCH NOTIFICATIONS '];
-  List<String> paragraphs = [
-    'Makeup has the power to transform your mood and empowers you to be a more confident person.',
-    'We have dedicated set of products and routines hand picked for every skin type.',
-    'Allow notifications for new makeup & cosmetics offers.',
-  ];
-  List<String> images = [
-    'assets/images/onboardimage0.png',
-    'assets/images/onboardimage1.png',
-    'assets/images/onboardimage2.jpg',
+
+
+
+  final list = [
+
+    _model(image: AppImage(image: 'onboardimage0.png'), title: 'WELCOME!', describtion: 'Makeup has the power to transform your mood and empowers you to be a more confident person.'),
+    _model(image: AppImage(image: 'onboardimage0.png'), title: 'SEARCH & PICK', describtion: 'We have dedicated set of products and routines hand picked for every skin type.'),
+    _model(image: AppImage(image: 'onboardimage0.png'), title: 'PUCH NOTIFICATIONS', describtion: 'Allow notifications for new makeup & cosmetics offers.'),
+
+    
+
+
+
+
   ];
 
   int currentview = 0;
@@ -45,10 +50,10 @@ class _OnBoardingViewState extends State<OnBoardingView> {
               }, child: Text('SKIP',style: TextStyle(color: Color(0xff434C6D)),)),
             ),
             Spacer(),
-            Image.asset(images[currentview], height: 300, width: 300),
+            list[currentview].image,
             SizedBox(height: 30),
             Text(
-              texts[currentview],
+              list[currentview].title,
               style: TextStyle(
                 color: Color(0xff434C6D),
                 fontWeight: FontWeight.bold,
@@ -57,7 +62,7 @@ class _OnBoardingViewState extends State<OnBoardingView> {
             ),
             SizedBox(height: 10),
             Text(
-              paragraphs[currentview],
+              list[currentview].describtion,
               style: TextStyle(
                 color: Color(0xff434C6D),
                 fontWeight: FontWeight.w400,
@@ -69,7 +74,7 @@ class _OnBoardingViewState extends State<OnBoardingView> {
             FloatingActionButton(
               onPressed: () {
                 setState(() {
-                  if (currentview < texts.length - 1) {
+                  if (currentview < list.length - 1) {
                     currentview++;
                   } else {
                     currentview = 0;
@@ -92,3 +97,13 @@ class _OnBoardingViewState extends State<OnBoardingView> {
   }
 }
 
+class _model {
+
+
+final String  title , describtion ;
+final Widget image ;
+
+  _model({required this.image, required this.title, required this.describtion});
+
+
+}

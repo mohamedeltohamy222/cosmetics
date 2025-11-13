@@ -3,7 +3,7 @@ import 'package:cosmetics_app/views/auth/forget_password.dart';
 import 'package:cosmetics_app/views/auth/login.dart';
 import 'package:cosmetics_app/views/auth/new_password.dart';
 import 'package:cosmetics_app/views/auth/verify_code.dart';
-import 'package:cosmetics_app/views/core/logic/helper_method.dart';
+import 'package:cosmetics_app/views/core/components/helper_method.dart';
 import 'package:cosmetics_app/views/home/on_boarding.dart';
 import 'package:cosmetics_app/views/home/pages/home.dart';
 import 'package:cosmetics_app/views/home/pages/my_cart.dart';
@@ -65,9 +65,12 @@ class CosmeticsApp extends StatelessWidget {
           onSurface: Color(0xff101623),
         ),
       ),
+      
                               
       debugShowCheckedModeBanner: false,
-      home:SplashView(),
+      home:VerifyCodeView(),
+
+
     );
   }
 }

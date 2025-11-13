@@ -1,7 +1,6 @@
 import 'dart:math';
 
 import 'package:cosmetics_app/views/core/components/app_button.dart';
-import 'package:cosmetics_app/views/core/app_input.dart';
 import 'package:cosmetics_app/views/core/components/app_image.dart';
 import 'package:cosmetics_app/views/core/components/app_login_or_register.dart';
 import 'package:cosmetics_app/views/core/components/search_input.dart';

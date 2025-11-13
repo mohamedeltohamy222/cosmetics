@@ -1,5 +1,7 @@
-import 'package:cosmetics_app/views/core/app_button.dart';
+import 'package:cosmetics_app/views/auth/login.dart';
+import 'package:cosmetics_app/views/core/components/app_button.dart';
 import 'package:cosmetics_app/views/core/components/app_image.dart';
+import 'package:cosmetics_app/views/core/components/helper_method.dart';
 import 'package:flutter/material.dart';
 
 class SuccessDialogView extends StatelessWidget {
@@ -21,6 +23,8 @@ class SuccessDialogView extends StatelessWidget {
                  SizedBox(height: 24,),
 
           AppButton(text: 'Return to login',onPressed: () {
+            
+            goTo(LoginView());
             
           },)
           
